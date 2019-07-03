@@ -1,4 +1,4 @@
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from . import errors
 from . import train
@@ -244,3 +244,9 @@ def reduce_mean(input_tensor: Any,
                 reduction_indices: Any=...,
                 keep_dims: Any=...
                 ) -> Any: ...
+
+
+def concat(values: List[Tensor],
+           axis: int,
+           name: str=...
+           ) -> Tensor: ...
